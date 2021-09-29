@@ -1,0 +1,10 @@
+This module is an inspiration from Udemy's Machine Learning L-Z: Hands on using Python.
+
+Regression model: are used for predicting a real value, for example salary. If our independent variable is time, then yo are forcasting future values, otherwise model is predicting present but unknown values, Regression techniques vary from Linear Regression to SVR and Random Forest Regression.
+
+1.Simple Linear Regression
+2.Multi Linear Regression
+3. Polynomial Regression
+4. Support Vector for Regression
+5. Decision Tree Regression
+6. Random Forest Regression
