@@ -8,3 +8,50 @@ Regression model: are used for predicting a real value, for example salary. If o
 4. Support Vector for Regression
 5. Decision Tree Regression
 6. Random Forest Regression
+
+Before working on Linear Regression, it is suggested to check the below mentioned assumptions are True:
+1. Linearity
+2. Homoscedasticity
+3. Multivariate Normality
+4. Independence of errors
+5. Lack of Multicollinearity
+
+We always have to check, if our results are statistically significant or not! That is we have to check our hypothesis.
+P-Value is the level of the marginal significance within the hypothesis testing that represents the probability of occurance of the given event. 
+For eg, if P-value>0.05: The result is not statistically significant
+if P=value<0.05: The result is statistically significant
+ 
+Building a Model:
+One can build a model using any of the 5-methods,
+1. All-in
+2. Backward Elimination
+3. Forward Selection
+4. Bidirectional Elimination
+5. Score Comparision
+
+Backward Elimination:
+1. Select a significance level to stay in the model
+2. Fit the full model with all possible predictors
+3. Consider the predictor with the highest P-value,if P>SL then go to Step-4, else the Model is Ready
+4. Remove the predictor
+5. Fit model without this variable
+
+Forward Selection
+1. Select a SL to enter the model (eg, SL=0.05)
+2. Fit all Simple Regression models y~xn, Select the one with the lowest P-value
+3. Keep this variable and fit all possible models with one extra predictor added to the one we already have
+4. Consider the predictor with the lowest P-vlaue. If P<SL go to step-3 else the model is ready
+
+Bidirectional Elimination:
+1. Select a SL to enter and to stay in the model.
+SLENTER= 0.05, SLSTAY=0.05
+2. Perform the next step of forward selection (variables must have P<SLENTER)
+3. Perform the next steps of backward selection (Variable must have P<SLSTAY)
+4. No new variables can enter and no old mariables can exit
+
+
+Basically, 
+1. Select a criterion if goodness of fit
+2. Construct All Possible Regresion Models: 2^n-1 total combinations, where n=no.of rows
+3. Select the one with the best criterion
+
